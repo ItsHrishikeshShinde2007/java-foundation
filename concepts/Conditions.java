@@ -7,7 +7,7 @@ public class Conditions
         Scanner driver = new Scanner(System.in);
         System.out.println("Rate Max verstappen out of 10: ");
         int x = driver.nextInt();
-        System.out.println("Rate Lewis Hamilton outy of 10: ");
+        System.out.println("Rate Lewis Hamilton out of 10: ");
         int y = driver.nextInt();
 
         System.out.println("Ok first i see whether you rated them same or different, then i will see how much you rated them");
@@ -20,7 +20,7 @@ public class Conditions
             System.out.println("Ok so you have rated them different, thats interesting, lets see how you rated them");
         }
 
-        System.out.println("Analyzing Max's rating... .. . ");
+        System.out.println("Analyzing Max's rating...");
         if(x > 0)
         {
             if(x >= 8)
@@ -29,12 +29,12 @@ public class Conditions
             }
             else
             {
-                System.out.println("You do realixe that Max deserves more than " + x + " right?, You dont look like a true F1 fan to me");
+                System.out.println("You do realize that Max deserves more than " + x + " right?, You dont look like a true F1 fan to me");
             }
         }
         else if( x < 0 )
         {
-            System.out.println("You knwo what?, just get out of here, you dont deserve to be here, you are not a true F1 fan");
+            System.out.println("You know what?, just get out of here, you dont deserve to be here, you are not a true F1 fan");
         }
         else
         {
