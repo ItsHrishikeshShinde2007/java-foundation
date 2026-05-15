@@ -70,6 +70,7 @@ public class NestedLoops
                 default:
                     System.out.println("Invalid choice!");
             }
+            shape.close();
         }  
     }
 }
