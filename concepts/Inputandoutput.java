@@ -1,4 +1,4 @@
-public class inputandoutput
+public class Inputandoutput
 {
     public static void main(String[] args)
     {

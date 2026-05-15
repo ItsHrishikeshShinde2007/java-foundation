@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Nestedloops
+public class NestedLoops
 {
     public static void square()
     {

@@ -1,4 +1,4 @@
-public class Loop
+public class Loops
 {
     public static void main(String[] args)
     {
