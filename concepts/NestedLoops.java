@@ -65,12 +65,12 @@ public class NestedLoops
                     rectangle();
                     break;
                 case 'd':
+                    shape.close();
                     System.out.println("Simply lovely");
                     return;
                 default:
                     System.out.println("Invalid choice!");
             }
-            shape.close();
-        }  
+        }
     }
 }
