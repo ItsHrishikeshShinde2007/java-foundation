@@ -29,13 +29,29 @@ public class GradeSystem
             System.out.println("Disaster Class");
         }
     }
+
+    public static void start(Scanner driver)
+    {
+        while(true)
+        {
+        System.out.println("1. Continue");
+        System.out.println("2. Exit");
+        int choice = driver.nextInt();
+
+        if(choice == 2)
+        {
+        return;
+        }
+
+        System.out.println("+++ F1 Grade Scanner +++");
+        System.out.println("Enter Your Marks: ");
+        double marks = driver.nextDouble();
+        gradeSystem(marks);
+        }        
+    }
     public static void main(String[] args)
     {
         Scanner points = new Scanner(System.in);
-        System.out.println("+++ F1 Grade Scanner +++");
-        System.out.println("Enter Your Marks: ");
-        double marks = points.nextDouble();
-        gradeSystem(marks);
-        points.close();
+        start(points);
     }
 }

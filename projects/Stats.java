@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Stats
 {
     public static void MaxStats(Scanner driver)
@@ -121,9 +122,9 @@ public class Stats
                System.out.println("Invalid choice!");
          }
     }
-    public static void main(String[] args)
+
+    public static void start(Scanner driver)
     {
-        Scanner driver = new Scanner(System.in);
         while(true)
         {
         System.out.println("=-=-= F1 Driver Stats System =-=-=");
@@ -150,11 +151,16 @@ public class Stats
                     break;
                 case 5:
                     System.out.println("Simply lovely");
-                    driver.close();
                     return;
                 default:
                    System.out.println("Invalid choice!");
             }
         }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner driver = new Scanner(System.in);
+        start(driver);
     }
 }
