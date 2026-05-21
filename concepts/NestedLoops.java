@@ -43,9 +43,9 @@ public class NestedLoops
     public static void main(String[] args)
     {
         System.out.println("Nested loops in Java:");
+        Scanner shape = new Scanner(System.in);
         while (true)
         {
-            Scanner shape = new Scanner(System.in);
             System.out.println("***Shape generator***");
             System.out.println("Choose a shape to generate:");
             System.out.println("a. Square");
@@ -66,11 +66,13 @@ public class NestedLoops
                     break;
                 case 'd':
                     System.out.println("Simply lovely");
-                    shape.close();
-                    return;
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
+            if (choice == 'd') break;
         }
+        shape.close();
+        return;
     }
 }
