@@ -45,6 +45,7 @@ public class ListManager
                         if(rm < 0 || rm >= count)
                         {
                             System.out.println("Invalid task number.");
+                            System.out.println();
                         }
                         else
                         {
