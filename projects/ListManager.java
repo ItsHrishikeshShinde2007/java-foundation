@@ -60,7 +60,6 @@ public class ListManager
                         {
                             System.out.println("Task "+ (i + 1) + " : " + alltasks[i]);
                         }
-                    System.out.println("\n");
                     break;
                 case 'd':
                     System.out.println("Simply lovely");
