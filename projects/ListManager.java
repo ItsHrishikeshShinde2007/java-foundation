@@ -11,12 +11,12 @@ public class ListManager
         {
             System.out.println("Welcome to the List Manager app.");
             System.out.println("Choose from the below");
-            System.out.println("a. Add a new Task");
-            System.out.println("b. Delete a completed a Task");
+            System.out.println("a. Add a new task");
+            System.out.println("b. Delete a completed task");
             System.out.println("c. Show the list");
             System.out.println("d. Exit");
             char option = tasks.next().charAt(0);
-            System.out.println("\n");
+            System.out.println("");
             switch(option)
             {
                 case 'a':
@@ -25,7 +25,6 @@ public class ListManager
                     String task = tasks.nextLine();
                     alltasks[count] = task;
                     count++;
-                    System.out.println("\n");
                     break;
                 case 'b':
                     if(count == 0)
@@ -39,20 +38,29 @@ public class ListManager
                         {
                             System.out.println("Task "+ (i + 1) + " : " + alltasks[i]);
                         }
+                        System.out.println();
                         System.out.println("Tell me which task is it that you want to delete: ");
                         int rm = tasks.nextInt() - 1;
-                        for(int i = rm; i < (count - 1); i++ )
+                        System.out.println();
+                        if(rm < 0 || rm >= count)
                         {
-                            alltasks[i] = alltasks[i + 1];
+                            System.out.println("Invalid task number.");
                         }
-                        count--;
-                        System.out.println("Revised List is:- ");
-                        for(int i = 0; i < count ; i++)
+                        else
                         {
-                            System.out.println("Task "+ (i + 1) + " : " + alltasks[i]);
+                            for(int i = rm; i < (count - 1); i++ )
+                            {
+                                alltasks[i] = alltasks[i + 1];
+                            }
+                            count--;
+                            System.out.println("Revised List is:- ");
+                            for(int i = 0; i < count ; i++)
+                            {
+                                System.out.println("Task "+ (i + 1) + " : " + alltasks[i]);
+                            }
+                            System.out.println();
                         }
                     }
-                    System.out.println("\n");
                     break;
                 case 'c':
                         System.out.println("The tasks are:- ");
@@ -60,12 +68,15 @@ public class ListManager
                         {
                             System.out.println("Task "+ (i + 1) + " : " + alltasks[i]);
                         }
+                        System.out.println();
                     break;
                 case 'd':
                     System.out.println("Simply lovely");
                     tasks.close();
-                    System.out.println("\n");
                     return;
+                default:
+                    System.out.println("Incorrect choice");
+                    break;
             }
         }
     }
