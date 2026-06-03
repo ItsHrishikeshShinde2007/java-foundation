@@ -1,24 +1,19 @@
 public class Objects
 {
-    String studentname;
-    String studentmajor;
-    int studentrollnumber;
+        String name;
+        String team;
+        int wdc;
 
-    Objects(String name, String major, int rollnumber)
+    public static void main (String[] args)
     {
-        studentname = name;
-        studentmajor = major;
-        studentrollnumber = rollnumber;
-    }
+        Objects max = new Objects();
 
-    public static void main(String[] args)
-    {
-        Objects student1 = new Objects(
-            "Hrishikesh Shinde",
-            "Artificial Intelligence and Machine Learning",
-            251215
-        );
+            max.name = "Max Verstappen";
+            max.team = "Red Bull Racing Formua One Team";
+            max.wdc = 4;
 
-        System.out.println(student1);
+            System.out.println("Name: " + max.name);
+            System.out.println("Team: " + max.team);
+            System.out.println("World Championships: " + max.wdc);
     }
 }
