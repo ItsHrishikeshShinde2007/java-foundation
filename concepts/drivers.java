@@ -1,4 +1,4 @@
-public class Objects
+public class drivers
 {
         String name;
         String team;
@@ -6,7 +6,7 @@ public class Objects
 
     public static void main (String[] args)
     {
-        Objects max = new Objects();
+        drivers max = new drivers();
 
             max.name = "Max Verstappen";
             max.team = "Red Bull Racing Formua One Team";
