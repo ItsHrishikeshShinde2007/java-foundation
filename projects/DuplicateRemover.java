@@ -1,51 +1,54 @@
-import java.util.Scanner;
-
 public class DuplicateRemover
 {
-    public static void main(String[] args)
+    static String[] list = {"Koenigsegg", "BMW", "Ferrari", "Buggatti", "McLaren", "BMW", "Hennessey",};
+    static String[] list2 = new String[list.length];
+    static int uniqueCount = 0;
+    public static void list1show()
     {
-        Scanner names = new Scanner(System.in);
-        System.out.println("+++ Welcome to Duplicate remover software +++");
-        System.out.println("So. we shall start with first tell me how many drivers do you like: ");
-        int number = names.nextInt();
-        names.nextLine();
-        String[] drivers = new String[number];
-        String[] uniqueDrivers = new String[number];
-        int uniqueCount = 0;
-        for (int i = 0; i < number; i++)
+        for (int i = 0; i < list.length; i++)
         {
-            System.out.println("Ok so list the name of " + (i + 1) + " driver :");
-            drivers[i] = names.nextLine();
-        }
+            System.out.println((i + 1) + ". " + list[i]);
+        }        
+    }
 
-        System.out.println("Ok do the name you have given are as follows");
-        for (int i = 0; i < number; i++)
+    public static void list2show()
+    {
+        for (int k = 0; k < uniqueCount; k++)
         {
-            System.out.println("Driver number " + (i + 1) + " " + drivers[i]);
+            System.out.println((k + 1) + ". " + list2[k]);
         }
-        for (int i = 0; i < number; i++)
+    }
+
+    public static void duplicateremover()
+    {
+        for (int i = 0; i < list.length; i++)
         {
-            boolean repeatedDriver = false;
-            for (int j = 0; j < uniqueCount; j++)
+            boolean unique = true;
+            for(int j = 0; j < i; j++)
             {
-                if (drivers[i].equals(uniqueDrivers[j]))
+                if(list[i].equals(list[j]))
                 {
-                    repeatedDriver = true;
+                    unique = false;
                     break;
                 }
             }
-            if (!repeatedDriver)
+            if(unique)
             {
-                uniqueDrivers[uniqueCount] = drivers[i];
+                list2[uniqueCount] = list[i];
                 uniqueCount++;
             }
         }
-        System.out.println("Unique drivers are:");
-
-        for(int i = 0; i < uniqueCount; i++)
-        {
-            System.out.println(uniqueDrivers[i]);
-        }
-        names.close();
+    }
+    public static void main(String[] Args)
+    {
+        System.out.println("Welcome to the Duplicate Remover");
+        System.out.println("This program will allow you to remove duplicates from a list of items");
+        System.out.println("So i already have a list of some car brands lets see how it works");
+        System.out.println("This is the list of car brands that we have");
+        list1show();
+        System.out.println("Ok so we can easily say that the brand BMW has been repeated");
+        System.out.println("Now lets apply the Duplicate remover");
+        duplicateremover();
+        list2show();
     }
 }

@@ -43,7 +43,6 @@ public class ListManager
         }
 
     }
-
     public static void listing_index()
     {
         System.out.println("This is the entire list of tasks that you have added to the list");
