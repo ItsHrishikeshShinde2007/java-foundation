@@ -1,107 +1,113 @@
 import java.util.Scanner;
 
+class Driver
+{
+    String name;
+    String team;
+    int number;
+}
 public class Classes
 {
-    String drivername;
-    String teamname;
-    int drivernumber;
+
+    public static void showdriver1(Driver driver1)
+    {
+        System.out.println();
+        System.out.println("Driver name: " + driver1.name);
+        System.out.println("Driver team: " + driver1.team);
+        System.out.println("Driver number: " + driver1.number);
+    }
+
+    public static void showdriver2(Driver driver2)
+    {
+        System.out.println();
+        System.out.println("Driver name: " + driver2.name);
+        System.out.println("Driver team: " + driver2.team);
+        System.out.println("Driver number: " + driver2.number);
+    }
+
+    public static void showdriver3(Driver driver3)
+    {
+        System.out.println();
+        System.out.println("Driver name: " + driver3.name);
+        System.out.println("Driver team: " + driver3.team);
+        System.out.println("Driver number: " + driver3.number);
+    }
+
+    public static void showdriver4(Driver driver4)
+    {
+        System.out.println();
+        System.out.println("Driver name: " + driver4.name);
+        System.out.println("Driver team: " + driver4.team);
+        System.out.println("Driver number: " + driver4.number);
+    }
+
+    public static void addDriver(Scanner main,Driver driver1, Driver driver2, Driver driver3, Driver driver4)
+    {
+        System.out.println("Please state the name of the driver that you want to add: ");
+        driver4.name = main.nextLine();
+        System.out.println("Please state the team of the driver that you want to add: ");
+        driver4.team = main.nextLine();
+        System.out.println("Please state the number of the driver that you want to add: ");
+        driver4.number = main.nextInt();
+        showdriver1(driver1);
+        showdriver2(driver2);
+        showdriver3(driver3);
+        showdriver4(driver4);        
+    }
     public static void main(String[] args)
     {
-        Scanner data = new Scanner(System.in);
-        System.out.println("This is the File that displays classes in Java");
-        System.out.println("This classes is very similar to what i have learned in c as struct");
+        Scanner main = new Scanner(System.in);
+
+        Driver driver1 = new Driver();
+        driver1.name = "Max Verstappen";
+        driver1.team = "Red Bull Racing Team";
+        driver1.number = 1;
+
+        Driver driver2 = new Driver();
+        driver2.name = "Lewis Hamilton";
+        driver2.team = "Mercedese AMG Formula One team";
+        driver2.number = 44;
+
+        Driver driver3 = new Driver();
+        driver3.name = "Charles Leclerc";
+        driver3.team = "Scuderia Ferrari";
+        driver3.number = 16;
+
+        Driver driver4 = new Driver();
+        driver4.name = "";
+        driver4.team = "";
+        driver4.number = 0;
+
+        System.out.println("Welcome to the Classes file");
+        System.out.println("We will use Classes here to display all the different stats of drivers");
+        System.out.println("List of drivers and their stats are as follows:- ");
+        showdriver1(driver1);
+        showdriver2(driver2);
+        showdriver3(driver3);
+
+        System.out.println("Now would you want to add any new driver, or leave it as is?");
+        char choice = main.nextLine().charAt(0);
+        switch (choice) 
+        {
+            case 'Y':
+            case 'y':
+                addDriver(main, driver1, driver2, driver3, driver4);
+            break;
+
+            case 'N':
+            case 'n':
+                showdriver1(driver1);
+                showdriver2(driver2);
+                showdriver3(driver3);
+                System.out.println("Simply Lovely");
+                main.close();
+            break;
         
-        Classes driver1 = new Classes();
-        driver1.drivername = "Max Verstappen";
-        driver1.teamname = "Red bull Racing";
-        driver1.drivernumber = 3;
-
-        Classes driver2 = new Classes();
-        driver2.drivername = "Charles LecLerc";
-        driver2.teamname = "Scuderia Ferrari";
-        driver2.drivernumber = 16;
-
-        Classes driver3 = new Classes();
-        driver3.drivername = "Oscar Piastri";
-        driver3.teamname = "McLaren Formula One Team";
-        driver3.drivernumber = 81;
-
-        Classes driver4 = new Classes();
-        driver4.drivername = "";
-        driver4.teamname = "";
-        driver4.drivernumber = 0;
-
-        System.out.println();
-        System.out.println("Data of driver 1:");
-        System.out.println("Name:  " + driver1.drivername);
-        System.out.println("Team name:  " + driver1.teamname);
-        System.out.println("Driver Number:  " + driver1.drivernumber);
-
-        System.out.println();
-        System.out.println("Data of driver 2:");
-        System.out.println("Name:  " + driver2.drivername);
-        System.out.println("Team name:  " + driver2.teamname);
-        System.out.println("Driver Number:  " + driver2.drivernumber);
+            default:
+                System.out.println("That will not work choose either yes or no. ('Y'/'N')");
+            break;
 
 
-        System.out.println();
-        System.out.println("Data of driver 3:");
-        System.out.println("Name:  " + driver3.drivername);
-        System.out.println("Team name:  " + driver3.teamname);
-        System.out.println("Driver Number:  " + driver3.drivernumber);
-
-        System.out.println("Do you want to add another new driver? (Y / N)");
-        char choice = data.next().charAt(0);
-        data.nextLine();
-
-        if(choice == 'Y' || choice == 'y')
-        {
-            System.out.print("Ok then please state the new driver name: ");
-            driver4.drivername = data.nextLine();
-            System.out.print("Ok then please state the team name of the new driver: ");
-            driver4.teamname = data.nextLine();
-            System.out.print("Ok then please state the driver number: ");
-            driver4.drivernumber = data.nextInt();
-
-            System.out.println("Ok so the revised list now is:- ");    
-
-            System.out.println();
-            System.out.println("Data of driver 1:");
-            System.out.println("Name:  " + driver1.drivername);
-            System.out.println("Team name:  " + driver1.teamname);
-            System.out.println("Driver Number:  " + driver1.drivernumber);
-
-            System.out.println();
-            System.out.println("Data of driver 2:");
-            System.out.println("Name:  " + driver2.drivername);
-            System.out.println("Team name:  " + driver2.teamname);
-            System.out.println("Driver Number:  " + driver2.drivernumber);
-
-
-            System.out.println();
-            System.out.println("Data of driver 3:");
-            System.out.println("Name:  " + driver3.drivername);
-            System.out.println("Team name:  " + driver3.teamname);
-            System.out.println("Driver Number:  " + driver3.drivernumber);
-
-            System.out.println();
-            System.out.println("Data of driver 4:");
-            System.out.println("Name:  " + driver4.drivername);
-            System.out.println("Team name:  " + driver4.teamname);
-            System.out.println("Driver Number:  " + driver4.drivernumber);            
         }
-
-        else if(choice == 'N' || choice == 'n')
-        {
-            System.out.println("Okay, i know my pre made choice is the best");
-        }
-
-        else
-        {
-            System.out.println("Enter a Valid choice next time");
-        }
-
-
-        data.close();
     }
 }
