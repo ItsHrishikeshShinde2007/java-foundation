@@ -6,7 +6,7 @@ class Driver
     String team;
     int number;
 }
-public class Classes
+public class StaticClasses
 {
 
     public static void showdriver1(Driver driver1)
