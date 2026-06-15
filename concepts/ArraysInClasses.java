@@ -19,7 +19,7 @@ public class ArraysInClasses
     public static void main (String[] args)
     {
         Scanner main = new Scanner(System.in);
-        Car[] garage = new Car[10];
+        Car[] garage = new Car[5];
         
         garage[0] = new Car();
         garage[0].Brand = "Koenigsegg";
@@ -46,8 +46,8 @@ public class ArraysInClasses
         garage[4].Model = "Pagani Zonda R Revolución";
         garage[4].Horsepower = 780;
 
-        System.out.println("This is the code file that makes dynamic classes so that we can add as many information as much as we want");
-        System.out.println("We are gonna chieve that ny actually implementing classes in arrays which means we will combine arrays in Classes");
+        System.out.println("This is the code file that makes classes so that we can add as many information as much as we want");
+        System.out.println("We are gonna achieve that by actually implementing classes in arrays which means we will combine arrays in Classes");
         for (int i = 0; i < garage.length; i++)
         {
             if (garage[i] != null)
