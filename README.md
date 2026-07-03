@@ -1,51 +1,47 @@
 # Java Foundations
 
-Collection of beginner Java programs and foundational syntax practice.
+Collection of Java programs created while learning core programming concepts and Object-Oriented Programming (OOP).
 
-This repository contains basic Java programs written while learning core programming concepts and preparing for Semester 3 Object-Oriented Programming (OOP).
+This repository documents my progression from Java fundamentals to OOP concepts through practice programs and mini-projects.
 
 ## Topics Covered
 
-- Java syntax
-- Variables and data types
+### Java Fundamentals
+
+- Variables
+- Data Types
 - Operators
-- User input using Scanner class
-- Console output
+- Scanner Input
+- Conditional Statements
+- Loops
+- Methods
+- Arrays
+- ArrayLists
 
-## Files Included
+### Object-Oriented Programming
 
-### Variables.java
-Practice program demonstrating:
-- variable declaration
-- primitive data types
-- strings
-- boolean values
-- output statements
+- Classes & Objects
+- Constructors
+- Inheritance
 
-### Operators.java
-Practice program demonstrating:
-- arithmetic operators
-- addition
-- subtraction
-- multiplication
-- division
-- modulo operator
+## Repository Structure
 
-### ScannerInput.java
-Practice program demonstrating:
-- Scanner class
-- taking user input
-- string input handling
-- console interaction
+concepts/
+- Individual programs demonstrating Java concepts.
 
-## Language Used
+projects/
+- Small console applications applying multiple concepts together.
 
-- Java
+## Current Focus
+
+Currently learning:
+
+- Method Overloading
+- Interfaces
+- Polymorphism
 
 ## Purpose
 
-Learning Java fundamentals for:
-- programming foundations
-- OOP preparation
-- backend development basics
-- problem-solving skills
+This repository is part of my software engineering journey toward backend development and AI/ML engineering.
+
+Each program focuses on understanding one concept before combining them into larger projects.
